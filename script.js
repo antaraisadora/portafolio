@@ -63,7 +63,7 @@ const rodajes = [
 function generarNombresFotos(cantidad) {
   const nombres = [];
   for (let i = 1; i <= cantidad; i++) {
-    nombres.push(`foto (${i}).JPG`);
+    nombres.push(`foto (${i}).jpg`);
   }
   return nombres;
 }
