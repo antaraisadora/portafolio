@@ -1,0 +1,288 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    font-family:'Jost', Helvetica, sans-serif;
+    font-weight:300;
+    color:#222;
+}
+
+h1, h2, h3{
+    font-family:'Cormorant Garamond', Georgia, serif;
+    font-weight:500;
+}
+body{
+    padding-top:65px;
+}
+header{
+    padding:80px;
+}
+
+section{
+    padding:140px 80px;
+}
+
+section h2{
+    font-size:2.2em;
+    margin-bottom:50px;
+    letter-spacing:1px;
+}
+
+img{
+    width:100%;
+}
+
+.gallery{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+    gap:24px;
+}
+
+.gallery img{
+    width:100%;
+    height:280px;
+    object-fit:cover;
+    cursor:pointer;
+    transition:transform 0.3s ease, box-shadow 0.3s ease;
+    display:block;
+}
+
+.gallery img:hover{
+    transform:scale(1.03);
+    box-shadow:0 10px 25px rgba(0,0,0,0.25);
+}
+
+/* Lightbox */
+.lightbox{
+    display:none;
+    position:fixed;
+    top:0;
+    left:0;
+    width:100%;
+    height:100%;
+    background:rgba(0,0,0,0.9);
+    z-index:1000;
+    justify-content:center;
+    align-items:center;
+    cursor:zoom-out;
+}
+
+.lightbox.activo{
+    display:flex;
+}
+
+.lightbox img{
+    max-width:90%;
+    max-height:90%;
+    object-fit:contain;
+    box-shadow:none;
+}
+.concierto-bloque{
+    margin-bottom:100px;
+}
+
+.concierto-bloque h3{
+    font-size:1.6em;
+    font-family:'Cormorant Garamond', Georgia, serif;
+}
+
+.concierto-bloque h3{
+    font-size:1.3em;
+    margin-bottom:5px;
+}
+
+.concierto-fecha{
+    color:#777;
+    margin-bottom:20px;
+    font-style:italic;
+}
+#menu{
+    position:fixed;
+    top:0;
+    left:0;
+    width:100%;
+    background:rgba(255,255,255,0.95);
+    display:flex;
+    justify-content:center;
+    gap:40px;
+    padding:20px;
+    z-index:500;
+    box-shadow:0 2px 10px rgba(0,0,0,0.05);
+}
+
+#menu a{
+    text-decoration:none;
+    color:#111;
+    font-size:0.9em;
+    letter-spacing:1px;
+    text-transform:uppercase;
+    transition:opacity 0.3s ease;
+}
+
+#menu a:hover{
+    opacity:0.5;
+}
+.sobre-mi-contenido{
+    display:flex;
+    gap:50px;
+    align-items:center;
+    flex-wrap:wrap;
+}
+
+.sobre-mi-contenido img{
+    width:420px;
+    height:420px;
+    object-fit:cover;
+    flex-shrink:0;
+}
+
+.sobre-mi-contenido p{
+    flex:1;
+    min-width:280px;
+    line-height:1.9;
+    font-size:1.3em;
+    color:#222;
+    font-family:'Cormorant Garamond', Georgia, serif;
+    letter-spacing:0.2px;
+}
+
+.contacto-links{
+    display:flex;
+    gap:30px;
+    margin-top:20px;
+}
+
+.contacto-links a{
+    text-decoration:none;
+    color:#111;
+    font-size:1.1em;
+    border-bottom:1px solid #111;
+    padding-bottom:3px;
+    transition:opacity 0.3s ease;
+}
+
+.contacto-links a:hover{
+    opacity:0.5;
+}
+#hero{
+    position:relative;
+    padding:0;
+}
+
+#hero img{
+    height:100vh;
+    object-fit:cover;
+}
+
+.hero-texto{
+    position:absolute;
+    bottom:60px;
+    left:50%;
+    transform:translateX(-50%);
+    text-align:center;
+    color:#fff;
+    width:100%;
+}
+
+.hero-texto h1{
+    font-size:2.5em;
+    letter-spacing:2px;
+    text-shadow:0 2px 15px rgba(0,0,0,0.5);
+}
+
+.hero-texto p{
+    font-size:1em;
+    letter-spacing:3px;
+    text-transform:uppercase;
+    margin-top:5px;
+    text-shadow:0 2px 10px rgba(0,0,0,0.5);
+}
+
+#hero::after{
+    content:"";
+    position:absolute;
+    bottom:0;
+    left:0;
+    width:100%;
+    height:40%;
+    background:linear-gradient(to top, rgba(0,0,0,0.6), transparent);
+    pointer-events:none;
+}
+.contacto-intro{
+    font-size:1.1em;
+    color:#333;
+    max-width:500px;
+    line-height:1.6;
+    margin-top:10px;
+}
+@media (max-width:768px){
+
+    header, section{
+        padding:60px 30px;
+    }
+
+    #menu{
+        gap:18px;
+        padding:15px 10px;
+        flex-wrap:wrap;
+    }
+
+    #menu a{
+        font-size:0.75em;
+    }
+
+    .hero-texto h1{
+        font-size:1.6em;
+    }
+
+    .hero-texto p{
+        font-size:0.8em;
+    }
+
+    section h2{
+        font-size:1.7em;
+        margin-bottom:30px;
+    }
+
+    .sobre-mi-contenido{
+        flex-direction:column;
+        gap:30px;
+    }
+
+    .sobre-mi-contenido img{
+        width:100%;
+        height:auto;
+        aspect-ratio:1/1;
+    }
+
+    .sobre-mi-contenido p{
+        font-size:1.1em;
+    }
+
+    .gallery{
+        grid-template-columns:repeat(auto-fit,minmax(140px,1fr));
+        gap:12px;
+    }
+
+    .gallery img{
+        height:160px;
+    }
+
+    .contacto-links{
+        flex-direction:column;
+        gap:15px;
+    }
+}
+.reveal{
+    opacity:0;
+    transform:translateY(30px);
+    transition:opacity 0.8s ease, transform 0.8s ease;
+}
+
+.reveal.visible{
+    opacity:1;
+    transform:translateY(0);
+}
