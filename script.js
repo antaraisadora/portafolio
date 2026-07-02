@@ -149,4 +149,4 @@ function activarAnimacionesScroll() {
   document.querySelectorAll(".reveal").forEach(el => observador.observe(el));
 }
 
-activarAnimacionesScroll();
+activarAnimacionesScroll(); 
