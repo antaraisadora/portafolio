@@ -7,12 +7,7 @@ const conciertos = [
     carpeta: "Alondra Noctvrna - Encuentro Detonadas - 26 de abril 2025",
     cantidadFotos: 20
   },
-  {
-    artista: "Los Amigos de tu Hermano",
-    fecha: "Ensayo 27 de junio 2026",
-    carpeta: "LADTH - Ensayo",
-    cantidadFotos: 14
-  },
+
   {
     artista: "Los Amigos de tu Hermano",
     fecha: "Palacio Rioja, Viña del Mar",
